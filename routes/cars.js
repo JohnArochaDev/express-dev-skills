@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+carsCtrl = require('../controllers/cars')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
