@@ -14,6 +14,6 @@ function index(req, res) {
 
 function show(req, res) {
   res.render('cars/show', {
-      car: Car.getOne(req.params.id),
+      cars: Car.getOne(req.params.id),
   });
 };
