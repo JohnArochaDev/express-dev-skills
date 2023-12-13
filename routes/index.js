@@ -12,6 +12,6 @@ router.get('/', function(req, res, next) {
     })
 });
 
-router.get('/:id', carCtrl.show);
+router.get('/cars/:id', carCtrl.show);
 
 module.exports = router;
