@@ -1,4 +1,4 @@
-const skills =  [
+const cars =  [
     {make: 'chevy', name: 'corvette', year: '1972', sexy: true},
     {make: 'ford', name: 'mustang', year: '1966', sexy: true},
     {make: 'mitsubishi' , name: 'eclipse', year: '1995', sexy: true},
@@ -8,9 +8,14 @@ const skills =  [
 
 module.exports = {
     getAll,
+    getOne,
 }
 
 function getAll() {
-    car = make + ' ' + model;
-    return skills
+    return cars
+}
+
+function getOne(id) {
+    id = parseInt(id);
+    return cars.find(cars => cars.id === id);
 }
