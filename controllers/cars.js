@@ -2,7 +2,8 @@ const Car = require('../models/car')
 
 
 module.exports = {
-    index
+    index,
+    show,
 }
 
 function index(req, res) {
@@ -10,3 +11,9 @@ function index(req, res) {
       car: Car.getAll(),
   });
 }
+
+function show(req, res) {
+  res.render('cars/show', {
+      car: Car.getOne(req.params.id),
+  });
+};
