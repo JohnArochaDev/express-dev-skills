@@ -8,12 +8,12 @@ module.exports = {
 
 function index(req, res) {
     res.render('cars/index', {
-      car: Car.getAll(),
+      cars: Car.getAll(),
   });
 }
 
 function show(req, res) {
   res.render('cars/show', {
-      cars: Car.getOne(req.params.id),
+      car: Car.getOne(req.params.id),
   });
 };
