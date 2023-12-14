@@ -1,37 +1,27 @@
 const cars =  [
     {    
     id: 1234,
-    make: 'chevy',
-    name: 'corvette',
-    year: '1972',
+    name: '1972 chevy corvette',
     sexy: true
 },
 {
     id: 2345, 
-    make: 'ford',
-    name: 'mustang', 
-    year: '1966', 
+    name: '1966 ford mustang', 
     sexy: true
 },
 {
-    id: 3456, 
-    make: 'mitsubishi' , 
-    name: 'eclipse', 
-    year: '1995', 
+    id: 3456,  
+    name: '1995mitsubishi eclipse', 
     sexy: true
 },
 {
     id: 4567, 
-    make: 'toyota', 
-    name: 'prius', 
-    year: 'any', 
+    name: 'any toyota prius', 
     sexy: false
 },
 {
     id: 5678, 
-    make: 'datsun', 
-    name: '240z', 
-    year: '1972', 
+    name: '1972 datsun 240z', 
     sexy: true
 },
 ]
