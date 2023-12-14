@@ -4,6 +4,11 @@ const Car = require('../models/car')
 module.exports = {
     index,
     show,
+    new: newCar,
+    delete: deleteCar,
+    create,
+    edit,
+    update,
 };
 
 function index(req, res) {
@@ -18,3 +23,22 @@ function show(req, res) {
   });
 };
 
+function newCar() {
+  
+}
+
+function deleteCar() {
+  
+}
+
+function create() {
+  
+}
+
+function edit() {
+  
+}
+
+function update() {
+  
+}

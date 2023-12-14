@@ -7,8 +7,7 @@ router.get('/', function(req, res, next) {
     res.render('index', {
         title: 'Cars',
         car: Car.getAll(),
-    
-    })
+    });
 });
 
 module.exports = router;

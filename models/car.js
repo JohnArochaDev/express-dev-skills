@@ -39,6 +39,9 @@ const cars =  [
 module.exports = {
     getAll,
     getOne,
+    update,
+    create,
+    delete: deleteIt,
 }
 
 function getAll() {
@@ -48,4 +51,22 @@ function getAll() {
 function getOne(id) {
     id = parseInt(id);
     return cars.find(car => car.id === id);
+}
+
+function update(id, newCar) {
+    id = parseInt(id);
+    const car = cars.findIndex(car => car.id === id);
+    Object.assign(car, newCar)
+}
+
+function create(car) {
+    car.id = Date.now() % 1000000;
+    car.sexy = false;
+    cars.push(car)
+}
+
+function deleteIt(id) {
+    id = parseInt(id);
+    const idx = cars.findIndex(car => car.id === id)
+    cars.splice(idx, 1)
 }
