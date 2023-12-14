@@ -28,8 +28,8 @@ function newCar(req, res) {
 };
 
 function deleteCar(req, res) {
-  Car.deleteIt(req.params.id)
-  res.redirect('/cars')
+  Car.delete(req.params.id)
+  res.redirect('/')
 };
 
 function create(req, res) {
