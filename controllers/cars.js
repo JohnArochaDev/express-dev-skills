@@ -34,7 +34,7 @@ function deleteCar(req, res) {
 
 function create(req, res) {
   Car.create(req.body)
-  res.redirect('/cars')
+  res.redirect('/')
 };
 
 function update(req, res) {
