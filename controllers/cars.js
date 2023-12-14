@@ -24,7 +24,7 @@ function show(req, res) {
 };
 
 function newCar(req, res) {
-  res.render('cars/new')
+  res.render('cars/new', { title: 'New Car'})
 };
 
 function deleteCar(req, res) {
@@ -37,15 +37,15 @@ function create(req, res) {
   res.redirect('/cars')
 };
 
+function update(req, res) {
+  Car.update(req.params.id, req.body);
+  res.redirect(`/cars/${req.params.id}`);
+};
+
 function edit(req, res) {
   const car = Car.getOne(req.params.id);
   res.render('cars/edit', {
     title: 'Edit Cars',
-    Car,
+    car,
   });
-};
-
-function update(req, res) {
-  Car.update(req.params.id, req.body);
-  res.redirect(`/cars/${req.params.id}`)
 };

@@ -5,8 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <form action="/cars/<%= Car.id %>?_method=PUT" method="POST"></form>
-    <input type="text" name="car" value="car.name">
-    <button type="submit">SUpdate Car</button>
+    <form action="/cars/<%= car.id %>?_method=PUT" method="POST"></form>
+    <input type="text" name="car" value="<%= car.make %> <%= car.name %> <%= car.year %>">
+    <button type="submit">Update Car</button>
 </body>
 </html>

@@ -55,7 +55,7 @@ function getOne(id) {
 
 function update(id, newCar) {
     id = parseInt(id);
-    const car = cars.findIndex(car => car.id === id);
+    const car = cars.find(car => car.id === id);
     Object.assign(car, newCar)
 }
 
