@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <form action="/cars/<%= Car.id %>?_method=PUT" method="POST"></form>
+    <input type="text" name="car" value="car.name">
+    <button type="submit">SUpdate Car</button>
+</body>
+</html>
