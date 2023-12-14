@@ -47,5 +47,5 @@ function getAll() {
 
 function getOne(id) {
     id = parseInt(id);
-    return cars.find(cars => cars.id === id);
+    return cars.find(car => car.id === id);
 }
