@@ -23,22 +23,29 @@ function show(req, res) {
   });
 };
 
-function newCar() {
-  
-}
+function newCar(req, res) {
+  res.render('cars/new')
+};
 
-function deleteCar() {
-  
-}
+function deleteCar(req, res) {
+  Car.deleteIt(req.params.id)
+  res.redirect('/cars')
+};
 
-function create() {
-  
-}
+function create(req, res) {
+  Car.create(req.body)
+  res.redirect('/cars')
+};
 
-function edit() {
-  
-}
+function edit(req, res) {
+  const car = Car.getOne(req.params.id);
+  res.render('cars/edit', {
+    title: 'Edit Cars',
+    Car,
+  });
+};
 
-function update() {
-  
-}
+function update(req, res) {
+  Car.update(req.params.id, req.body);
+  res.redirect(`/cars/${req.params.id}`)
+};
